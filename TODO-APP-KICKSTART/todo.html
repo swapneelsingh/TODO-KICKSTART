@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cosmic KICKSTART Todo - Stay Organized</title>
+    <link rel="stylesheet" href="./todoApp/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="user-info">
+                <img id="userAvatar" src="" alt="User Avatar">
+                <h2 id="userFirstname"></h2>
+            </div>
+            <div class="logo">
+                <h1>Kickstart</h1>
+            </div>
+            <button id="signOutBtn">Sign Out</button>
+        </header>
+
+        <!-- Navigation Section -->
+        <div class="navigation">
+            <a href="todo.html" class="active">Todo</a>
+            <a href="completed.html">Completed</a>
+            <a href="archived.html">Archived</a>
+        </div>
+        <!-- <div class="navigation">
+            <a href="todo.html" class="active">Todo (<span id="todo-count">0</span>)</a>
+            <a href="completed.html">Completed (<span id="completed-count">0</span>)</a>
+            <a href="archived.html">Archived (<span id="archived-count">0</span>)</a>
+        </div> -->
+
+        <div class="stats-container">
+            <div class="details">
+                <h1>Cosmic Kickstart Todo</h1>
+                <p>Organize your universe, one task at a time ✨</p>
+                <div id="progressBar">
+                    <div id="progress"></div>
+                </div>
+            </div>
+            <div class="stats-numbers">
+                <div id="numbers">0 / 0</div>
+            </div>
+        </div>
+
+        <form id="todoForm">
+            <input type="text" id="taskInput" placeholder="What needs to be done?" autocomplete="off" required>
+            <button type="submit" id="newTask">+</button>
+        </form>
+
+        <ul id="task-list"></ul>
+    </div>
+
+    <script src="./todoApp/app.js"></script>
+</body>
+
+</html>

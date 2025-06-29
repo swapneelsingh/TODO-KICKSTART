@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-bg: #0a0b1e;
+  --secondary-bg: #1a1b3a;
+  --accent-purple: #6366f1;
+  --accent-cyan: #06b6d4;
+  --accent-pink: #ec4899;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --success: #10b981;
+  --border: #334155;
+}
+
+/* Body */
+body {
+  background: linear-gradient(135deg, var(--primary-bg) 0%, #1e1b4b 100%);
+  color: var(--text-primary);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Wrapper Styling */
+.wrapper {
+  background-color: var(--secondary-bg);
+  border: 2px solid var(--purple);
+  border-radius: 20px;
+  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 0 20px rgba(130, 141, 255, 0.3);
+  backdrop-filter: blur(10px);
+  margin-top: 50px;
+}
+
+/* Heading */
+.wrapper h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: var(--accent-purple);
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.wrapper form p a {
+  color: var(--accent-purple); /* or any color you want */
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.wrapper form p a:hover {
+  color: var(--accent-cyan);
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Labels and Inputs */
+label {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: var(--teal);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+input {
+  width: 100%; /* Make the input take up the full container width */
+  padding: 14px;
+  border: 1px solid var(--accent-cyan);
+  background-color: var(--background);
+  color: var(--text-primary);
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+/* Button */
+button#signup-btn {
+  padding: 14px;
+  background-color: var(--accent-purple);
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button#signup-btn:hover {
+  background-color: #5f6dfc;
+}
+
+/* Bottom text */
+form p {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+form p a {
+  color: var(--teal);
+  text-decoration: none;
+}
+
+form p a:hover {
+  text-decoration: underline;
+}
+
+/* Error Styling for Incorrect Inputs */
+.incorrect input {
+  background-color: #ff4e4e;
+  border-color: #ff4e4e;
+}
+
+.incorrect label {
+  color: #ff4e4e;
+}
+#error-message {
+  color: #ff4e4e; /* bright red matching your input error color */
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Style for the Date of Birth input */
+#dob-input {
+  padding: 14px;
+  border: 1px solid var(--accent-cyan);
+  background-color: var(--background);
+  color: var(--text-primary);
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+#dob-input:focus {
+  border-color: var(--accent-purple);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.incorrect input#dob-input {
+  background-color: #ff4e4e;
+  border-color: #ff4e4e;
+}
+
+/* Remove default calendar icon and use white one */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1); /* makes the default icon white-ish */
+  cursor: pointer;
+}

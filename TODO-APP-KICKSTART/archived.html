@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Archived Tasks</title>
+    <link rel="stylesheet" href="./todoApp/styles.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="user-info">
+                <img id="userAvatar" src="" alt="User Avatar">
+                <h2 id="userFirstname"></h2>
+            </div>
+            <div class="logo">
+                <h1>Kickstart</h1>
+            </div>
+            <button id="signOutBtn">Sign Out</button>
+        </header>
+
+        <div class="navigation">
+            <a href="todo.html">Todo</a>
+            <a href="completed.html">Completed</a>
+            <a href="archived.html" class="active">Archived</a>
+        </div>
+        <div class="stats-container">
+            <div class="details">
+                <h1>Archived Tasks</h1>
+                <p>Long-term reference tasks.</p>
+            </div>
+        </div>
+        <ul id="task-list"></ul>
+    </div>
+
+    <script src="./todoApp/archived.js"></script>
+</body>
+
+</html>
